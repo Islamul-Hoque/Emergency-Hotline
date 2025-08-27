@@ -54,5 +54,20 @@ getId('clear-btn').addEventListener('click', function(){
     getId('Call-History-Container').innerText = '';
 })
 
+getId('Left-Side-container').addEventListener('click',function(e){
+    if(e.target.closest('.copy-btn')){
+        const copyBtn = e.target.closest('.copy-btn');
+        const callNumber = copyBtn.parentNode.parentNode.children[2].children[0].innerText;
 
+        //Alert
+        alert(`The number has been copied: ${callNumber}`);
 
+        //Copy Number
+        const initialCopy = Number(getId('copy').innerText);
+        const currentCopy = initialCopy + 1;
+        getId('copy').innerText = currentCopy;
+
+        //Clipboard
+        navigator.clipboard.writeText(callNumber)
+    }
+})
