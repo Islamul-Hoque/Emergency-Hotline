@@ -14,7 +14,6 @@ getId('Left-Side-container').addEventListener('click', function(e){
     }
 })
 
-
 //Call Buttons Functionalities
 getId('Left-Side-container').addEventListener('click', function(e){
     if(e.target.closest('.call-btn')){
@@ -54,5 +53,6 @@ getId('Left-Side-container').addEventListener('click', function(e){
 getId('clear-btn').addEventListener('click', function(){
     getId('Call-History-Container').innerText = '';
 })
+
 
 
