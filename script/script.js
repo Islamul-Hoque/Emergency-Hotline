@@ -5,12 +5,29 @@ function getId(id){
 // Heart Functionalities
 getId('Left-Side-container').addEventListener('click', function(e){
     if(e.target.className.includes('fa-heart')){
-        // const loveBtn =e.target;
 
         const initialHeart = Number(getId('heart').innerText);
         const currentHeart = initialHeart + 1;
         getId('heart').innerText = currentHeart;
+    }
+})
 
+//Copy Buttons Functionalities
+getId('Left-Side-container').addEventListener('click',function(e){
+    if(e.target.closest('.copy-btn')){
+        const copyBtn = e.target.closest('.copy-btn');
+        const callNumber = copyBtn.parentNode.parentNode.children[2].children[0].innerText;
+
+        //Alert
+        alert(`The number has been copied: ${callNumber}`);
+
+        //Copy Number
+        const initialCopy = Number(getId('copy').innerText);
+        const currentCopy = initialCopy + 1;
+        getId('copy').innerText = currentCopy;
+
+        //Clipboard
+        navigator.clipboard.writeText(callNumber)
     }
 })
 
@@ -34,7 +51,7 @@ getId('Left-Side-container').addEventListener('click', function(e){
         getId('coins').innerText = currentCoins;
         alert(`📞 Calling ${serviceName} ${callNumber} ...`);
 
-    // Get Call History Container
+    // Create Call History Div
             const callHistoryContainer = getId('Call-History-Container');
             const createDiv = document.createElement('div')
             createDiv.innerHTML = `
@@ -54,20 +71,4 @@ getId('clear-btn').addEventListener('click', function(){
     getId('Call-History-Container').innerText = '';
 })
 
-getId('Left-Side-container').addEventListener('click',function(e){
-    if(e.target.closest('.copy-btn')){
-        const copyBtn = e.target.closest('.copy-btn');
-        const callNumber = copyBtn.parentNode.parentNode.children[2].children[0].innerText;
 
-        //Alert
-        alert(`The number has been copied: ${callNumber}`);
-
-        //Copy Number
-        const initialCopy = Number(getId('copy').innerText);
-        const currentCopy = initialCopy + 1;
-        getId('copy').innerText = currentCopy;
-
-        //Clipboard
-        navigator.clipboard.writeText(callNumber)
-    }
-})
