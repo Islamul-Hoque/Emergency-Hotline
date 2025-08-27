@@ -30,10 +30,9 @@
                 <h3 class="text-[#006747] font-bold text-[1.1rem]"> Emergency <br> Services </h3>
             </div>
             <div class="flex items-center justify-between gap-4 ">
-                <div class="w-[6rem] flex items-center justify-center bg-[#41ff6b1a] px-4 py-3 gap-2 rounded-[1.5rem] font-semibold"><p>0</p><img src="images/heart.png" class="w-5" alt=""></div>
-                <div class="w-[6rem] flex items-center justify-center bg-[#41ff6b1a] px-4 py-3 gap-2 rounded-[1.5rem] font-semibold"><p>100</p><img src="images/coin.png" class="w-5" alt=""></div>
+                <div class="w-[6rem] flex items-center justify-center bg-[#41ff6b1a] px-4 py-3 gap-2 rounded-[1.5rem] font-semibold"><p id="heart">0</p><img src="images/heart.png" class="w-5" alt=""></div>
+                <div class="w-[6rem] flex items-center justify-center bg-[#41ff6b1a] px-4 py-3 gap-2 rounded-[1.5rem] font-semibold"><p id="coins">100</p><img src="images/coin.png" class="w-5" alt=""></div>
                 <div class="w-[6rem] flex items-center justify-center bg-[#0F893C] px-4 py-3 gap-1 rounded-[1.5rem]  text-white font-semibold"><p>0</p>Copy</div>
-            
             </div>
         </nav>
         <section class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]">
@@ -47,14 +46,13 @@
 
     <main class="bg-[#f5fff6]">
         <section class="w-11/12 mx-auto grid grid-cols-4 gap-6 md:grid-cols-12 py-10">
-            <section class="col-span-2 md:col-span-9">
+            <section id="Left-Side-container" class="col-span-2 md:col-span-9">
                 <div class="grid grid-cols-3 gap-4">
 
-
                     <div class="p-4 shadow-[0px_2px_3px_0px_#00000026] bg-white rounded-2xl">
                         <div class="flex justify-between items-center gap-4 mb-4">
                             <img src="images/emergency.png" class="bg-[#ffe3e2] rounded-[1rem] p-4 w-[4rem]" alt="">
-                            <div><i class="fa-regular fa-heart text-[1.5rem] text-[#5c5c5c]"></i></div>
+                            <div class="love-btn"><i class="fa-regular fa-heart text-[1.5rem] text-[#5c5c5c]"></i></div>
                         </div>
                         <div>
                             <h2 class="font-bold text-[1.1rem]">National Emergency Number</h2>
@@ -65,9 +63,8 @@
                             <div class="bg-[#f2f2f2] rounded-[0.8rem] px-4 py-1 inline-flex text-[0.75rem]">All</div>
                         </div>
                         <div class="flex justify-between items-center gap-4 ">
-                            <!-- <div class="w-full flex justify-center items-center border-1 border-[#00000026]  "><button class="btn btn-wide py-2 text-[#5c5c5c]"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div> -->
                             <div class="w-full"><button class="btn btn-ghost border-1 border-[#00000026]  font-normal w-full text-[#5c5c5c] rounded-[0.7rem] py-1"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div>
-                            <div class="w-full"><button class="btn font-normal w-full bg-[#00a63e] hover:bg-[#028c34] text-white rounded-[0.7rem] py-1"><i class="fa-solid fa-phone"></i>&nbsp;Call</button></div>
+                            <div class="call-btn w-full"><button class="btn font-normal w-full bg-[#00a63e] hover:bg-[#028c34] text-white rounded-[0.7rem] py-1"><i class="fa-solid fa-phone"></i>&nbsp;Call</button></div>
                         </div>
                     </div>
                     <div class="p-4 shadow-[0px_2px_3px_0px_#00000026] bg-white rounded-2xl">
@@ -81,12 +78,11 @@
                         </div>
                         <div class="my-5">
                             <span class="font-bold text-2xl">999</span> <br>
-                            <div class="bg-[#f2f2f2] rounded-[0.8rem] px-4 py-1 inline-flex text-[0.75rem]">Police</div>
+                            <div class="bg-[#f2f2f2] rounded-[0.8rem] px-4 py-1 inline-flex text-[0.75rem]">All</div>
                         </div>
                         <div class="flex justify-between items-center gap-4 ">
-                            <!-- <div class="w-full flex justify-center items-center border-1 border-[#00000026]  "><button class="btn btn-wide py-2 text-[#5c5c5c]"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div> -->
                             <div class="w-full"><button class="btn btn-ghost border-1 border-[#00000026]  font-normal w-full text-[#5c5c5c] rounded-[0.7rem] py-1"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div>
-                            <div class="w-full"><button class="btn font-normal w-full bg-[#00a63e] hover:bg-[#028c34] text-white rounded-[0.7rem] py-1"><i class="fa-solid fa-phone"></i>&nbsp;Call</button></div>
+                            <div class="call-btn w-full"><button class="btn font-normal w-full bg-[#00a63e] hover:bg-[#028c34] text-white rounded-[0.7rem] py-1"><i class="fa-solid fa-phone"></i>&nbsp;Call</button></div>
                         </div>
                     </div>
                     <div class="p-4 shadow-[0px_2px_3px_0px_#00000026] bg-white rounded-2xl">
@@ -103,148 +99,35 @@
                             <div class="bg-[#f2f2f2] rounded-[0.8rem] px-4 py-1 inline-flex text-[0.75rem]">All</div>
                         </div>
                         <div class="flex justify-between items-center gap-4 ">
-                            <!-- <div class="w-full flex justify-center items-center border-1 border-[#00000026]  "><button class="btn btn-wide py-2 text-[#5c5c5c]"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div> -->
                             <div class="w-full"><button class="btn btn-ghost border-1 border-[#00000026]  font-normal w-full text-[#5c5c5c] rounded-[0.7rem] py-1"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div>
-                            <div class="w-full"><button class="btn font-normal w-full bg-[#00a63e] hover:bg-[#028c34] text-white rounded-[0.7rem] py-1"><i class="fa-solid fa-phone"></i>&nbsp;Call</button></div>
-                        </div>
-                    </div>
-                    <div class="p-4 shadow-[0px_2px_3px_0px_#00000026] bg-white rounded-2xl">
-                        <div class="flex justify-between items-center gap-4 mb-4">
-                            <img src="images/emergency.png" class="bg-[#ffe3e2] rounded-[1rem] p-4 w-[4rem]" alt="">
-                            <div><i class="fa-regular fa-heart text-[1.5rem] text-[#5c5c5c]"></i></div>
-                        </div>
-                        <div>
-                            <h2 class="font-bold text-[1.1rem]">National Emergency Number</h2>
-                            <p class="text-[#5c5c5c] text-sm">National Emergency</p>
-                        </div>
-                        <div class="my-5">
-                            <span class="font-bold text-2xl">999</span> <br>
-                            <div class="bg-[#f2f2f2] rounded-[0.8rem] px-4 py-1 inline-flex text-[0.75rem]">All</div>
-                        </div>
-                        <div class="flex justify-between items-center gap-4 ">
-                            <!-- <div class="w-full flex justify-center items-center border-1 border-[#00000026]  "><button class="btn btn-wide py-2 text-[#5c5c5c]"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div> -->
-                            <div class="w-full"><button class="btn btn-ghost border-1 border-[#00000026]  font-normal w-full text-[#5c5c5c] rounded-[0.7rem] py-1"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div>
-                            <div class="w-full"><button class="btn font-normal w-full bg-[#00a63e] hover:bg-[#028c34] text-white rounded-[0.7rem] py-1"><i class="fa-solid fa-phone"></i>&nbsp;Call</button></div>
-                        </div>
-                    </div>
-                    <div class="p-4 shadow-[0px_2px_3px_0px_#00000026] bg-white rounded-2xl">
-                        <div class="flex justify-between items-center gap-4 mb-4">
-                            <img src="images/police.png" class="bg-[#ffe3e2] rounded-[1rem] p-4 w-[4rem]" alt="">
-                            <div><i class="fa-regular fa-heart text-[1.5rem] text-[#5c5c5c]"></i></div>
-                        </div>
-                        <div>
-                            <h2 class="font-bold text-[1.1rem]">Police Helpline Number</h2>
-                            <p class="text-[#5c5c5c] text-sm">Police</p>
-                        </div>
-                        <div class="my-5">
-                            <span class="font-bold text-2xl">999</span> <br>
-                            <div class="bg-[#f2f2f2] rounded-[0.8rem] px-4 py-1 inline-flex text-[0.75rem]">Police</div>
-                        </div>
-                        <div class="flex justify-between items-center gap-4 ">
-                            <!-- <div class="w-full flex justify-center items-center border-1 border-[#00000026]  "><button class="btn btn-wide py-2 text-[#5c5c5c]"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div> -->
-                            <div class="w-full"><button class="btn btn-ghost border-1 border-[#00000026]  font-normal w-full text-[#5c5c5c] rounded-[0.7rem] py-1"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div>
-                            <div class="w-full"><button class="btn font-normal w-full bg-[#00a63e] hover:bg-[#028c34] text-white rounded-[0.7rem] py-1"><i class="fa-solid fa-phone"></i>&nbsp;Call</button></div>
-                        </div>
-                    </div>
-                    <div class="p-4 shadow-[0px_2px_3px_0px_#00000026] bg-white rounded-2xl">
-                        <div class="flex justify-between items-center gap-4 mb-4">
-                            <img src="images/ambulance.png" class="bg-[#ffe3e2] rounded-[1rem] p-4 w-[4rem]" alt="">
-                            <div><i class="fa-regular fa-heart text-[1.5rem] text-[#5c5c5c]"></i></div>
-                        </div>
-                        <div>
-                            <h2 class="font-bold text-[1.1rem]">Fire Service Number</h2>
-                            <p class="text-[#5c5c5c] text-sm">Fire Service</p>
-                        </div>
-                        <div class="my-5">
-                            <span class="font-bold text-2xl">999</span> <br>
-                            <div class="bg-[#f2f2f2] rounded-[0.8rem] px-4 py-1 inline-flex text-[0.75rem]">All</div>
-                        </div>
-                        <div class="flex justify-between items-center gap-4 ">
-                            <!-- <div class="w-full flex justify-center items-center border-1 border-[#00000026]  "><button class="btn btn-wide py-2 text-[#5c5c5c]"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div> -->
-                            <div class="w-full"><button class="btn btn-ghost border-1 border-[#00000026]  font-normal w-full text-[#5c5c5c] rounded-[0.7rem] py-1"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div>
-                            <div class="w-full"><button class="btn font-normal w-full bg-[#00a63e] hover:bg-[#028c34] text-white rounded-[0.7rem] py-1"><i class="fa-solid fa-phone"></i>&nbsp;Call</button></div>
-                        </div>
-                    </div>
-                    <div class="p-4 shadow-[0px_2px_3px_0px_#00000026] bg-white rounded-2xl">
-                        <div class="flex justify-between items-center gap-4 mb-4">
-                            <img src="images/emergency.png" class="bg-[#ffe3e2] rounded-[1rem] p-4 w-[4rem]" alt="">
-                            <div><i class="fa-regular fa-heart text-[1.5rem] text-[#5c5c5c]"></i></div>
-                        </div>
-                        <div>
-                            <h2 class="font-bold text-[1.1rem]">National Emergency Number</h2>
-                            <p class="text-[#5c5c5c] text-sm">National Emergency</p>
-                        </div>
-                        <div class="my-5">
-                            <span class="font-bold text-2xl">999</span> <br>
-                            <div class="bg-[#f2f2f2] rounded-[0.8rem] px-4 py-1 inline-flex text-[0.75rem]">All</div>
-                        </div>
-                        <div class="flex justify-between items-center gap-4 ">
-                            <!-- <div class="w-full flex justify-center items-center border-1 border-[#00000026]  "><button class="btn btn-wide py-2 text-[#5c5c5c]"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div> -->
-                            <div class="w-full"><button class="btn btn-ghost border-1 border-[#00000026]  font-normal w-full text-[#5c5c5c] rounded-[0.7rem] py-1"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div>
-                            <div class="w-full"><button class="btn font-normal w-full bg-[#00a63e] hover:bg-[#028c34] text-white rounded-[0.7rem] py-1"><i class="fa-solid fa-phone"></i>&nbsp;Call</button></div>
-                        </div>
-                    </div>
-                    <div class="p-4 shadow-[0px_2px_3px_0px_#00000026] bg-white rounded-2xl">
-                        <div class="flex justify-between items-center gap-4 mb-4">
-                            <img src="images/police.png" class="bg-[#ffe3e2] rounded-[1rem] p-4 w-[4rem]" alt="">
-                            <div><i class="fa-regular fa-heart text-[1.5rem] text-[#5c5c5c]"></i></div>
-                        </div>
-                        <div>
-                            <h2 class="font-bold text-[1.1rem]">Police Helpline Number</h2>
-                            <p class="text-[#5c5c5c] text-sm">Police</p>
-                        </div>
-                        <div class="my-5">
-                            <span class="font-bold text-2xl">999</span> <br>
-                            <div class="bg-[#f2f2f2] rounded-[0.8rem] px-4 py-1 inline-flex text-[0.75rem]">Police</div>
-                        </div>
-                        <div class="flex justify-between items-center gap-4 ">
-                            <!-- <div class="w-full flex justify-center items-center border-1 border-[#00000026]  "><button class="btn btn-wide py-2 text-[#5c5c5c]"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div> -->
-                            <div class="w-full"><button class="btn btn-ghost border-1 border-[#00000026]  font-normal w-full text-[#5c5c5c] rounded-[0.7rem] py-1"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div>
-                            <div class="w-full"><button class="btn font-normal w-full bg-[#00a63e] hover:bg-[#028c34] text-white rounded-[0.7rem] py-1"><i class="fa-solid fa-phone"></i>&nbsp;Call</button></div>
-                        </div>
-                    </div>
-                    <div class="p-4 shadow-[0px_2px_3px_0px_#00000026] bg-white rounded-2xl">
-                        <div class="flex justify-between items-center gap-4 mb-4">
-                            <img src="images/ambulance.png" class="bg-[#ffe3e2] rounded-[1rem] p-4 w-[4rem]" alt="">
-                            <div><i class="fa-regular fa-heart text-[1.5rem] text-[#5c5c5c]"></i></div>
-                        </div>
-                        <div>
-                            <h2 class="font-bold text-[1.1rem]">Fire Service Number</h2>
-                            <p class="text-[#5c5c5c] text-sm">Fire Service</p>
-                        </div>
-                        <div class="my-5">
-                            <span class="font-bold text-2xl">999</span> <br>
-                            <div class="bg-[#f2f2f2] rounded-[0.8rem] px-4 py-1 inline-flex text-[0.75rem]">All</div>
-                        </div>
-                        <div class="flex justify-between items-center gap-4 ">
-                            <!-- <div class="w-full flex justify-center items-center border-1 border-[#00000026]  "><button class="btn btn-wide py-2 text-[#5c5c5c]"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div> -->
-                            <div class="w-full"><button class="btn btn-ghost border-1 border-[#00000026]  font-normal w-full text-[#5c5c5c] rounded-[0.7rem] py-1"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button></div>
-                            <div class="w-full"><button class="btn font-normal w-full bg-[#00a63e] hover:bg-[#028c34] text-white rounded-[0.7rem] py-1"><i class="fa-solid fa-phone"></i>&nbsp;Call</button></div>
+                            <div class="call-btn w-full"><button class="btn font-normal w-full bg-[#00a63e] hover:bg-[#028c34] text-white rounded-[0.7rem] py-1"><i class="fa-solid fa-phone"></i>&nbsp;Call</button></div>
                         </div>
                     </div>
                     
 
-
-
                 </div>
             </section>
-            <section class="shadow-[0px_2px_3px_0px_#00000026] bg-white rounded-2xl p-4 col-span-2 md:col-span-3">
+            <section class="shadow-[0px_2px_3px_0px_#00000026] bg-white rounded-2xl p-3 col-span-2 md:col-span-3">
                 <div class="flex justify-between items-center mb-4">
                     <div><i class="fa-regular fa-clock text-gray-500 text-[1.1rem]"></i>&nbsp;<span class="font-semibold text-xl">Call History</span></div>
-                    <button class="btn btn-wide w-[5rem] bg-[#00a63e] px-4 py-2 gap-1 rounded-[1.5rem]  text-white font-semibold">Clear</button>
+                    <button id="clear-btn" class="btn btn-wide w-[5rem] bg-[#00a63e] px-4 py-2 gap-1 rounded-[1.5rem]  text-white font-semibold">Clear</button>
                 </div>
                 
-                <div class="Call-History-Container">
-                    <div class="bg-[#f2f2f2] p-2 mb-2 rounded-[0.8rem] flex justify-between items-center">
+                <div id="Call-History-Container">
+                </div>
+            </section>
+        </section>
+
+        <!-- <div class="bg-[#f2f2f2] px-3 py-2 mb-2 rounded-[0.8rem] flex justify-between items-center">
                         <div>
                             <h2 class="text-sm font-semibold">Fire Service Number</h2>
                             <p class="text-sm text-[#5c5c5c]">999</p>
                         </div>
                         <div class="text-[0.8rem]">11:36:58 AM </div>
-                    </div>
-                </div>
-            </section>
-        </section>
+        </div> -->
+
+
+
     </main>
     <script src="script/script.js"></script>
 </body>
