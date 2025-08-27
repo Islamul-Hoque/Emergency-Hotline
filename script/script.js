@@ -2,6 +2,19 @@ function getId(id){
     return document.getElementById(id);      
 }
 
+// Heart Functionalities
+getId('Left-Side-container').addEventListener('click', function(e){
+    if(e.target.className.includes('fa-heart')){
+        // const loveBtn =e.target;
+
+        const initialHeart = Number(getId('heart').innerText);
+        const currentHeart = initialHeart + 1;
+        getId('heart').innerText = currentHeart;
+
+    }
+})
+
+
 //Call Buttons Functionalities
 getId('Left-Side-container').addEventListener('click', function(e){
     if(e.target.closest('.call-btn')){
