@@ -38,8 +38,7 @@ getId('Left-Side-container').addEventListener('click', function(e){
 
         const serviceName = callBtn.parentNode.parentNode.children[1].children[0].innerText;
         const callNumber = callBtn.parentNode.parentNode.children[2].children[0].innerText;
-        const time = new Date().toLocaleTimeString();
-
+        const time = new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
     // Coins Calculation
         const initialCoin = Number(getId('coins').innerText);
 
@@ -70,5 +69,3 @@ getId('Left-Side-container').addEventListener('click', function(e){
 getId('clear-btn').addEventListener('click', function(){
     getId('Call-History-Container').innerText = '';
 })
-
-
